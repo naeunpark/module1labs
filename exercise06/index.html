@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Excersie 6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="header">Welcome to Cap Online shop</h1>
+    </header>
+    <section id="main">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h2>Best Sellers</h2>
+            <div class="products">
+                <div class="product" product-id="1">
+                    <div class="product-img" style="background-image: url(https://static.mlb-korea.com/images/goods/thnail/m/20210805/3ACP6601N-50GRS-44174800596433439.png/dims/resize/828x828);"></div>
+                    <div class="product-details">
+                        <span class="product-name">NY Cap</span>
+                        <span class="product-price">NZD $50</span>
+                        <button>Order Now</button>
+                    </div>
+                </div>
+                <div class="product" product-id="2">
+                    <div class="product-img" style="background-image: url(https://static.mlb-korea.com/images/goods/thnail/m/20210805/3ACP6601N-07BGS-44174797654485716.png/dims/resize/828x828);"></div>
+                    <div class="product-details">
+                        <span class="product-name">NY Cap</span>
+                        <span class="product-price">NZD $50</span>
+                        <button>Order Now</button>
+                    </div>
+                </div>
+                <div class="product" product-id="3">
+                    <div class="product-img" style="background-image: url(https://static.mlb-korea.com/images/goods/thnail/m/20210806/3ACP6601N-07BKS-44234843657123066.png/dims/resize/828x828);"></div>
+                    <div class="product-details">
+                        <span class="product-name">NY Cap</span>
+                        <span class="product-price">NZD $50</span>
+                        <button>Order Now</button>
+                    </div>
+                </div>
+                <div class="product" product-id="4">
+                    <div class="product-img" style="background-image: url(https://static.mlb-korea.com/images/goods/thnail/m/20210825/3ACP6601N-07LDL-45902187557667270.png/dims/resize/828x828);"></div>
+                    <div class="product-details">
+                        <span class="product-name">NY Cap</span>
+                        <span class="product-price">NZD $50</span>
+                        <button>Order Now</button>
+                    </div>
+                </div>
+                <div class="product" product-id="5">
+                    <div class="product-img" style="background-image: url(https://static.mlb-korea.com/images/goods/thnail/m/20210813/3ACP6601N-50BGS-44833460211755640.png/dims/resize/828x828);"></div>
+                    <div class="product-details">
+                        <span class="product-name">NY Cap</span>
+                        <span class="product-price">NZD $50</span>
+                        <button>Order Now</button>
+                    </div>
+                </div>
+                <div class="product" product-id="6">
+                    <div class="product-img" style="background-image: url(https://static.mlb-korea.com/images/goods/thnail/m/20230327/3ACP6601N-50TQD-95924321400959431.png/dims/resize/828x828);"></div>
+                    <div class="product-details">
+                        <span class="product-name">NY Cap</span>
+                        <span class="product-price">NZD $50</span>
+                        <button>Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section id="form">
+        <form>
+            <label for="address">Please type your shipping address</label>
+            <input type="text" name="address" id="address">
+            <button>Order Now!</button>
+        </form>
+    </section>
+    <footer>
+        <p>@copyright 2050 by nobody. all rights reversed</p>
+    </footer>
+</body>
+<script>
+    const products = document.querySelectorAll(".product");
+    const form = document.querySelector("#form");
+    const formBtn = form.querySelector("button");
+
+    function shippingAlert() {
+        const address = document.querySelector("#address").value;
+        alert("Your Order will be shipped soon to " + address);
+        form.style.display = "none";
+    }
+
+    function showForm() {
+        form.style.display = "block";
+    }
+
+    products.forEach(product => {
+        const btn = product.querySelector("button");
+        btn.addEventListener("click", showForm);
+    });
+
+    formBtn.addEventListener("click", shippingAlert);
+</script>
+
+</html>

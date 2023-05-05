@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #F2E3DB;
+}
+
+body>* {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    background-color: #41644A;
+    color: #F2E3DB;
+    padding: 5%;
+}
+
+nav {
+    float: left;
+    padding: 5%;
+    width: 30%;
+    height: 500px;
+    background-color: #263A29;
+}
+
+article {
+    float: left;
+    width: 70%;
+    padding: 5%;
+}
+
+aside {
+    clear: both;
+    padding: 5%;
+    background-color: #fff;
+}
+
+footer {
+    padding: 5%;
+    background-color: #E86A33;
+}
